@@ -15,7 +15,7 @@ Web Server:  Laravel Artisan / Apache
 Package Manager: Composer, npm/pnpm
 
 🧠 User Flow
-<img width="1745" height="598" alt="Blank diagram" src="https://github.com/user-attachments/assets/8550cbe8-077d-4987-b532-a9acbc38bfce" />
+<img width="1745" height="598" alt="Blank diagram (1)" src="https://github.com/user-attachments/assets/ce5f8312-eb91-4a5f-9fc6-37d6324d5b3c" />
 
 ⚙️ Langkah Instalasi & Menjalankan Proyek
 1️⃣ Clone Repository
