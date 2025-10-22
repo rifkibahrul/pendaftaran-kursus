@@ -1,6 +1,7 @@
 # Sistem Pendaftaran Kursus
 
 ## 🎯 Tujuan
+
 Membangun sistem sederhana untuk pendaftaran kursus, mencakup fitur:
 - Data kursus
 - Pendaftaran peserta
@@ -12,13 +13,22 @@ Membangun sistem sederhana untuk pendaftaran kursus, mencakup fitur:
 - **Frontend:** TailwindCSS v3  
 - **Database:** MySQL  
 - **Web Server:** Laravel Artisan / Apache  
-- **Package Manager:** Composer, npm/pnpm  
+- **Package Manager:** Composer, npm
+
+## ⏲️ Estimasi waktu mengerjakan
+
+-  Perancangan sistem: 60 menit
+-  Siapkan environment & buat project Laravel (setup composer, .env, DB, Install Breeze, Tailwind): 30 menit
+-  Membuat model dan migration: 65 menit
+-  Membuat controller dan routing: 180 menit
+-  Buat Blade views: 60 menit
+-  Total Estimasi Waktu: 6,5 Jam
 
 ## 🧠 User Flow
+
 <img width="1745" height="598" alt="Blank diagram (1)" src="https://github.com/user-attachments/assets/ce5f8312-eb91-4a5f-9fc6-37d6324d5b3c" />
 
 ## ⚙️ Langkah Instalasi & Menjalankan Proyek
-
 
 ### 1️⃣ Clone Repository
 ```bash
