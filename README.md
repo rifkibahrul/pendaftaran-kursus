@@ -31,18 +31,38 @@ composer install
 ```bash
 npm install
 ```
-npm install
 ### 3️⃣ Buat Database di MySQL
-•	mysql -u root -p
+```bash
+mysql -u root -p
+
 CREATE DATABASE kursus-online CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-4️⃣ Konfigurasi .env
-•	cp .env.example .env
-Edit isi DB_DATABASE=kursus_db, DB_USERNAME=root, DB_PASSWORD=
-5️⃣ Generate Key & Migrasi Database
-•	php artisan key:generate
-php artisan migrate
-6️⃣ Jalankan Tailwind
-•	npm run dev
-7️⃣ Jalankan Server
-•	php artisan serve
+```
+### 4️⃣ Konfigurasi .env
+```bash
+cp .env.example .env
+```
+Edit isi menjadi
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=kursus-online
+DB_USERNAME=root
+DB_PASSWORD=
+```
+### 5️⃣ Generate Key & Migrasi Database
+```bash
+php artisan key:generate
+```
+```bash
+php artisan migrate --seed
+```
+### 6️⃣ Jalankan Tailwind
+```bash
+npm run dev
+```
+### 7️⃣ Jalankan Server
+```bash
+php artisan serve
+```
 Akses di http://localhost:8000
