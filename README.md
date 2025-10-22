@@ -3,9 +3,12 @@
 ## 🎯 Tujuan
 
 Membangun sistem sederhana untuk pendaftaran kursus, mencakup fitur:
-- Data kursus
-- Pendaftaran peserta
-- Tampilan daftar kursus dan peserta
+- User terdapat 2 role, student dan owner
+- User dapat melakukan
+    - Melihat katalog kelas
+    - Melihat detail kelas
+    - Mendaftar kelas
+- User dapat Register, Login/Logout (register secara default terdaftar sebagai student)
 
 ## ⚙️ Tech Stack
 
@@ -14,6 +17,11 @@ Membangun sistem sederhana untuk pendaftaran kursus, mencakup fitur:
 - **Database:** MySQL  
 - **Web Server:** Laravel Artisan / Apache  
 - **Package Manager:** Composer, npm
+
+## Struktur Databse
+
+<img width="775" height="450" alt="image" src="https://github.com/user-attachments/assets/5ee67c7d-3124-41b0-b82c-55550072cb93" />
+
 
 ## ⏲️ Estimasi waktu mengerjakan
 
