@@ -1,30 +1,38 @@
-## Sistem Pendaftaran Kursus
+# Sistem Pendaftaran Kursus
 
-🎯 Tujuan
+## 🎯 Tujuan
 Membangun sistem sederhana untuk pendaftaran kursus, mencakup fitur:
 - Data kursus
 - Pendaftaran peserta
 - Tampilan daftar kursus dan peserta
 
-⚙️ Tech Stack
-Komponen:    Teknologi
-Backend:     Laravel 11 (PHP 8.2)
-Frontend:    TailwindCSS v3
-Database:    MySQL
-Web Server:  Laravel Artisan / Apache
-Package Manager: Composer, npm/pnpm
+## ⚙️ Tech Stack
 
-🧠 User Flow
+- **Backend:** Laravel 11 (PHP 8.2)  
+- **Frontend:** TailwindCSS v3  
+- **Database:** MySQL  
+- **Web Server:** Laravel Artisan / Apache  
+- **Package Manager:** Composer, npm/pnpm  
+
+## 🧠 User Flow
 <img width="1745" height="598" alt="Blank diagram (1)" src="https://github.com/user-attachments/assets/ce5f8312-eb91-4a5f-9fc6-37d6324d5b3c" />
 
-⚙️ Langkah Instalasi & Menjalankan Proyek
-1️⃣ Clone Repository
-•	git clone https://github.com/username/project-kursus.git
-cd project-kursus
-2️⃣ Install Dependencies
-•	composer install
+## ⚙️ Langkah Instalasi & Menjalankan Proyek
+
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/username/project-kursus.git
+```
+### 2️⃣ Install Dependencies
+```bash
+composer install
+```
+```bash
 npm install
-3️⃣ Buat Database di MySQL
+```
+npm install
+### 3️⃣ Buat Database di MySQL
 •	mysql -u root -p
 CREATE DATABASE kursus-online CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 4️⃣ Konfigurasi .env
