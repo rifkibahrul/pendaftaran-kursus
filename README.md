@@ -86,6 +86,7 @@ php artisan serve
 ```
 Akses di http://127.0.0.1:8000
 ### 8️ Login dengan akun Owner atau Student
+Setelah menjalankan migrasi dan seeder, secara otomatis akan dibuat dua akun dengan peran owner dan student.
 - Owner
 ```bash
 email: owner@example.com
