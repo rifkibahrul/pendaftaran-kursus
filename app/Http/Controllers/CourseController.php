@@ -59,6 +59,7 @@ class CourseController extends Controller
         return back()->with('success', 'Kursus dihapus');
     }
 
+    // Cek apakah kursus milik owner yang login
     protected function authorizeOwnerOf(Course $course)
     {
         if ($course->owner_id !== Auth::id()) {

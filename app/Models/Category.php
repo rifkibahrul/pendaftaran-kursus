@@ -16,11 +16,13 @@ class Category extends Model
         'icon',
     ];
 
+    // Relasi satu kategori memiliki banyak course
     public function courses()
     {
         return $this->hasMany(Course::class);
     }
 
+    // 'slug' untuk route model binding
     public function getRouteKeyName()
     {
         return 'slug';

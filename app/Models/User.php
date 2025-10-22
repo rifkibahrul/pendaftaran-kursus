@@ -60,13 +60,13 @@ class User extends Authenticatable
         return $this->role === 'student';
     }
 
-    // Relasi untuk courses yang dimiliki owner
+    // Relasi: owner memiliki banyak kursus
     public function courses()
     {
         return $this->hasMany(Course::class, 'owner_id');
     }
 
-    // Relasi untuk courses yang diikuti student
+    // Relasi: student mengikuti banyak kursus
     public function enrolledCourses()
     {
         return $this->belongsToMany(Course::class, 'course_students', 'student_id', 'course_id')

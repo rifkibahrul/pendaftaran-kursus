@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
-Route::get('/details/{course:slug}', [FrontController::class, 'details'])->name('front.details');
+Route::get('/details/{course:slug}', [FrontController::class, 'details'])->name('front.details'); 
 Route::get('/category/{category:slug}', [FrontController::class, 'category'])->name('front.category');
 
 Route::get('/dashboard', function () {
@@ -36,7 +36,7 @@ Route::prefix('owner')->name('owner.')->group(function () {
 Route::prefix('student')->name('student.')->middleware(['auth'])->group(function () {
     Route::get('/dashboard', [CourseStudentController::class, 'dashboard'])->name('dashboard');
     Route::get('/my-courses', [CourseStudentController::class, 'myCourses'])->name('my-courses');
-    Route::post('/enroll/{course}', [CourseStudentController::class, 'enroll'])->name('enroll');
+    Route::post('/enroll/{course}', [CourseStudentController::class, 'enroll'])->name('enroll');    //--> Ketika student melakukan checkout
 });
 
 

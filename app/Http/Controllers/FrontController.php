@@ -9,10 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class FrontController extends Controller
 {
+    // Halamn utama / landing page
     public function index()
     {
         $courses = Course::with(['category', 'owner'])
-            ->withCount('students')
+            ->withCount('students')     // jumlah murid terdaftar
             ->latest()
             ->paginate(12);
 
@@ -20,6 +21,7 @@ class FrontController extends Controller
 
         return view('front.index', compact('courses', 'categories'));
     }
+
 
     public function details(Course $course)
     {

@@ -9,6 +9,23 @@ use Illuminate\Support\Facades\Auth;
 
 class CourseStudentController extends Controller
 {
+    // Dashboard student
+    public function dashboard()
+    {
+        $enrolledCourses = Auth::user()
+            ->enrolledCourses()
+            ->with(['category', 'owner'])
+            ->withPivot('registered_at')
+            ->latest('course_students.registered_at')
+            ->limit(6)
+            ->get();
+
+        $totalCourses = Auth::user()->enrolledCourses()->count();
+
+        return view('student.dashboard', compact('enrolledCourses', 'totalCourses'));
+    }
+
+    // Fungsi untuk mendaftar ke kursus
     public function enroll(Course $course)
     {
         $userId = Auth::id();
@@ -30,6 +47,7 @@ class CourseStudentController extends Controller
             ->with('success', 'Berhasil mendaftar kursus!');
     }
 
+    // Menampilkan daftar kursus yang diikuti oleh student
     public function myCourses()
     {
         $enrolledCourses = Auth::user()
@@ -40,20 +58,4 @@ class CourseStudentController extends Controller
 
         return view('student.my-courses', compact('enrolledCourses'));
     }
-
-    public function dashboard()
-    {
-        $enrolledCourses = Auth::user()
-            ->enrolledCourses()
-            ->with(['category', 'owner'])
-            ->withPivot('registered_at')
-            ->latest('course_students.registered_at')
-            ->limit(6)
-            ->get();
-
-        $totalCourses = Auth::user()->enrolledCourses()->count();
-
-        return view('student.dashboard', compact('enrolledCourses', 'totalCourses'));
-    }
-
 }

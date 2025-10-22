@@ -18,16 +18,19 @@ class Course extends Model
         'owner_id',
     ];
 
+    // Relasi ke kategori
     public function category()
     {
         return $this->belongsTo(Category::class);
     }
 
+    // Relasi ke user (owner)
     public function owner()
     {
         return $this->belongsTo(User::class, 'owner_id');
     }
 
+    // Relasi ke student (many-to-many)
     public function students()
     {
         return $this->belongsToMany(User::class, 'course_students', 'course_id', 'student_id')
@@ -35,11 +38,13 @@ class Course extends Model
             ->withTimestamps();
     }
 
+    // 'slug' untuk  URL
     public function getRouteKeyName()
     {
         return 'slug';
     }
 
+    // Cek apakah user tertentu sudah terdaftar pada kursus
     public function isEnrolledBy($userId)
     {
         return $this->students()->where('student_id', $userId)->exists();

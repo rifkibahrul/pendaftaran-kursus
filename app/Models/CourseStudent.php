@@ -12,14 +12,16 @@ class CourseStudent extends Model
 
     protected $fillable = ['student_id', 'course_id', 'registered_at'];
     protected $casts = [
-        'registered_at' => 'datetime', // versi baru (Laravel 10+)
+        'registered_at' => 'datetime',
     ];
 
+    // Relasi ke student
     public function student()
     {
         return $this->belongsTo(User::class, 'student_id');
     }
 
+    // Relasi ke course
     public function course()
     {
         return $this->belongsTo(Course::class);
