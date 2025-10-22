@@ -54,6 +54,7 @@ DB_PASSWORD=
 ```bash
 php artisan key:generate
 ```
+Jalankan perintah migrasi disertai seeder
 ```bash
 php artisan migrate --seed
 ```
@@ -65,4 +66,17 @@ npm run dev
 ```bash
 php artisan serve
 ```
-Akses di http://localhost:8000
+Akses di http://127.0.0.1:8000
+### 8️ Login dengan akun Owner atau Student
+- Owner
+```bash
+email: owner@example.com
+password: 123123
+```
+- Student
+```bash
+email: student@example.com
+password: 123123
+```
+
+
