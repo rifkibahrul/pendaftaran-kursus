@@ -22,7 +22,7 @@ Membangun sistem sederhana untuk pendaftaran kursus, mencakup fitur:
 -  Membuat model dan migration: 65 menit
 -  Membuat controller dan routing: 180 menit
 -  Buat Blade views: 60 menit
--  Total Estimasi Waktu: 6,5 Jam
+-  *Total Estimasi Waktu: 6,5 Jam*
 
 ## 🧠 User Flow
 
